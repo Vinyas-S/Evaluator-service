@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "prebuild":"npx eslint . --fix",
+    "build": "npx tsc",
+    "watch": "npx tsc -w",
+    "prestart": "npm run build",
+    "start": "npx nodemon dist/index.js",
+    "dev": "npx concurrently  \"npm run watch\" \"npm run start\""
+  } ,
+  "dependencies": {
+    "bullmq": "^5.7.5",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.1.1",
+    "@types/express": "^4.17.21",
+    "@types/ioredis": "^5.0.0",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "globals": "^15.0.0",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
+  }
+}
